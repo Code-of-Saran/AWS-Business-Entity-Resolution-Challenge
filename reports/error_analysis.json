@@ -1,0 +1,95 @@
+{
+  "decision_config": {
+    "threshold": 0.725,
+    "threshold_s2": 0.675,
+    "threshold_s3": 0.725,
+    "rel_threshold": 0.0,
+    "min_best": 0.0,
+    "max_matches": 0,
+    "exclusive": true
+  },
+  "counts": {
+    "accepted_pairs": 1398270,
+    "false_positive_pairs": 21231,
+    "true_pairs": 1529465,
+    "missed_in_scoring": 103122,
+    "missed_in_blocking": 49304
+  },
+  "false_positives": {
+    "n": 21231,
+    "buckets": {
+      "identical_name_different_address": 8026,
+      "transliterated_name": 4021,
+      "near_identical_name": 3927,
+      "near_identical_address": 2717,
+      "weak_on_both": 1071,
+      "empty_address": 739,
+      "identical_address_different_name": 718,
+      "identical_name_and_address": 12
+    },
+    "bucket_pct": {
+      "identical_name_different_address": 37.8,
+      "transliterated_name": 18.94,
+      "near_identical_name": 18.5,
+      "near_identical_address": 12.8,
+      "weak_on_both": 5.04,
+      "empty_address": 3.48,
+      "identical_address_different_name": 3.38,
+      "identical_name_and_address": 0.06
+    },
+    "by_country": {
+      "India": 13545,
+      "US": 7686
+    }
+  },
+  "false_negatives_scored": {
+    "n": 103122,
+    "buckets": {
+      "identical_name_different_address": 45441,
+      "transliterated_name": 15441,
+      "near_identical_address": 14631,
+      "near_identical_name": 10510,
+      "empty_address": 9040,
+      "weak_on_both": 5952,
+      "identical_address_different_name": 2107
+    },
+    "bucket_pct": {
+      "identical_name_different_address": 44.07,
+      "transliterated_name": 14.97,
+      "near_identical_address": 14.19,
+      "near_identical_name": 10.19,
+      "empty_address": 8.77,
+      "weak_on_both": 5.77,
+      "identical_address_different_name": 2.04
+    },
+    "by_country": {
+      "US": 59368,
+      "India": 43754
+    }
+  },
+  "false_negatives_blocking": {
+    "n": 49304,
+    "buckets": {
+      "transliterated_name": 24443,
+      "empty_address": 12560,
+      "weak_on_both": 4246,
+      "near_identical_name": 3609,
+      "near_identical_address": 3527,
+      "identical_name_different_address": 908,
+      "identical_address_different_name": 11
+    },
+    "bucket_pct": {
+      "transliterated_name": 49.58,
+      "empty_address": 25.47,
+      "weak_on_both": 8.61,
+      "near_identical_name": 7.32,
+      "near_identical_address": 7.15,
+      "identical_name_different_address": 1.84,
+      "identical_address_different_name": 0.02
+    },
+    "by_country": {
+      "India": 36961,
+      "US": 12343
+    }
+  }
+}

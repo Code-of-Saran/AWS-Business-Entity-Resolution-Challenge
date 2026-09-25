@@ -1,0 +1,31 @@
+# ML Challenge 2026 - Business Entity Resolution
+# Pinned to the exact versions the reported results were produced with.
+# Python 3.14.4 (CPython). No pretrained model, no network access, no external data.
+#
+# License audit (challenge rule 5 requires the final model to be MIT / Apache-2.0
+# and at most 8B parameters). The final matcher is a LightGBM gradient-boosted
+# tree ensemble trained from scratch on the provided data only: ~1.4M parameters
+# (split thresholds + leaf values), under the MIT licence. No pretrained weights
+# of any kind are used, so the 8B-parameter limit is met by four orders of
+# magnitude.
+#
+#   package        version     licence
+#   lightgbm       4.7.0       MIT          <- the final model
+#   rapidfuzz      3.14.6      MIT
+#   polars         1.44.2      MIT
+#   pyarrow        25.0.1      Apache-2.0
+#   xgboost        3.4.1       Apache-2.0   (compared only)
+#   numpy          2.4.4       BSD-3-Clause
+#   scipy          1.17.1      BSD-3-Clause
+#   scikit-learn   1.8.0       BSD-3-Clause (compared only)
+#   joblib         1.5.3       BSD-3-Clause
+
+numpy==2.4.4
+scipy==1.17.1
+polars==1.44.2
+pyarrow==25.0.1
+scikit-learn==1.8.0
+lightgbm==4.7.0
+xgboost==3.4.1
+rapidfuzz==3.14.6
+joblib==1.5.3

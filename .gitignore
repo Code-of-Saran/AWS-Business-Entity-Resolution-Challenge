@@ -1,0 +1,50 @@
+# ---- Challenge data: supplied separately, never committed ----
+# `dataset` is a symlink to the untouched challenge bundle; teammates recreate it
+# or set BER_DATA_ROOT instead.
+/dataset
+AWS Dataset.zip
+student_resource/
+
+# ---- Generated artifacts: 6.9 GB, fully regeneratable by run_pipeline.sh ----
+/artifacts/*
+# ...except the trained models and the tuned decision rule (16 MB total), which let
+# a teammate skip stages 3-6 (~2 h of training). Git cannot re-include a file whose
+# parent directory is excluded, so the directory is un-excluded first.
+!/artifacts/models/
+/artifacts/models/*
+!/artifacts/models/matcher.joblib
+!/artifacts/models/prescore_ranker.txt
+!/artifacts/models/decision_config.json
+!/artifacts/models/matcher_meta.json
+!/artifacts/models/prescore_ranker.json
+
+# ---- Machine-local run transcripts (the .sh runners in logs/ are tracked) ----
+logs/*.log
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.cache/
+.ipynb_checkpoints/
+
+# ---- Editor / OS / tooling ----
+.DS_Store
+.claude/
+*.tmp
+*.swp
+*~
+.idea/
+.vscode/
+
+# ---- Intentionally TRACKED, despite looking generated ----
+# output/          the two leaderboard TSVs (23 MB each) + submission_info.json
+# reports/         eda_report.json, error_analysis.json
+# experiments/     experiment scripts and their logged results
+# artifacts/models the five small files whitelisted above
+#
+# Note: no blanket *.joblib / *.pkl / *.pt rule here on purpose -- it would silently
+# re-exclude artifacts/models/matcher.joblib whitelisted above.

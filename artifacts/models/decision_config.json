@@ -1,0 +1,9 @@
+{
+  "threshold": 0.725,
+  "threshold_s2": 0.675,
+  "threshold_s3": 0.725,
+  "rel_threshold": 0.0,
+  "min_best": 0.0,
+  "max_matches": 0,
+  "exclusive": true
+}
